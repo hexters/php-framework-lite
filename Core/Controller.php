@@ -9,5 +9,10 @@
       require_once __DIR__ . '/../app/Views/' . $view . '.php';
     }
 
+    public function model($name) {
+      require_once __DIR__ . '/../app/Models/' . $name . '.php';
+      return new $name();
+    }
+
   }
   

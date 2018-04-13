@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-require_once __DIR__ . '/../app/Config/appConfig.php';
  trait HelperTrait {
 
   public function req($name) {
@@ -10,14 +9,17 @@ require_once __DIR__ . '/../app/Config/appConfig.php';
   }
 
   public function file ($file) {
-    if(!empty($_FILES[$file])){
+    if(!empty($_FILES[$file]['tmp_name'])){
       $_FILES[$file]['ext'] = '.' . explode('.', $_FILES[$file]['name'])[1];
+      $_FILES[$file]['new_name'] = date('Y_m_d_h_i_s_') . md5(uniqid() . time()) . '.' . explode('.', $_FILES[$file]['name'])[1];
       return $_FILES[$file];
     }
+
+    return false;
   }
 
   public function base_url($path){
-    $app = new appConfig();
+    $app = new Config();
     return rtrim($app->baseUrl, '/') . '/' . ltrim($path, '/');
   }
 
