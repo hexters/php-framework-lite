@@ -21,25 +21,22 @@ Buka file /Core/Config.php
 create data lihat contoh dibawah ini
 ```
   /**
-  * Dalam Controller nya
+  * Dalam Controller
   */
+  ...
 
-  class HomeController extends Controller {
-
-      public function index () {
-        $user = $this->model('user');
-        $user->create([
-          'nama' => 'Nama User',
-          'umur' => '19'
-        ]);
-      }
-
+  public function index () {
+    $user = $this->model('user');
+    $user->create([
+      'nama' => 'Nama User',
+      'umur' => '19'
+    ]);
   }
 
   ... 
 
   /**
-  * Dalam Model User nya
+  * Dalam Model User
   */
 
   class user extends Database {
@@ -53,14 +50,12 @@ create data lihat contoh dibawah ini
       public function create($data) {
         $this->insert($this->table, $data);
       }
-
-
   }
 
 
 ```
 
-Menggunakan templating view
+Menggunakan view templating
 ```
 
   /**
@@ -102,3 +97,5 @@ Menggunakan templating view
   }
 
 ```
+
+### coming soon...
