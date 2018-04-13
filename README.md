@@ -66,7 +66,7 @@ Menggunakan view templating
 
     // Tambahkan layout header
     $this->view('layouts/header', [
-      // Buat judul title page
+      // Buat judul halaman
       'title' => 'Upload File'
     ]);
     $this->view('home');
