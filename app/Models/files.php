@@ -1,6 +1,6 @@
 <?php 
 
-  class Files extends Database {
+  class files extends Database {
 
     protected $table = 'files';
 
