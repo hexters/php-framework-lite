@@ -18,7 +18,7 @@ Buka file /Core/Config.php
     ...
 ```
 # Contoh
-Contoh create data lihat contoh dibawah ini
+create data lihat contoh dibawah ini
 ```
   /**
   * Dalam Controller nya
