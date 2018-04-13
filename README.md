@@ -2,7 +2,7 @@
 
 Sebuah project kecil untuk memenuhi tugas kuliah dengan menggunakan konsep MVC
 
-# Configurasi file
+# Configurasi
 Buka file /Cor/Config.php
 ```
     ...
