@@ -67,7 +67,7 @@ Menggunakan view templating
     // Tambahkan layout header
     $this->view('layouts/header', [
       // Buat judul halaman
-      'title' => 'Upload File'
+      'title' => 'Home Page'
     ]);
     $this->view('home');
 
@@ -78,7 +78,7 @@ Menggunakan view templating
     * Jika ingin menambahkan style dan script
     */
     $this->view('layouts/header', [
-      'title' => 'Upload File',
+      'title' => 'Home Page',
       'styles' => [
         'https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css',
         // dan seterusnya...
